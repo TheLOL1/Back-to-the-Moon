@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Back to the Moon</string>
     <string name="nome">Name</string>
+    <string name="score">Score:</string>
 </resources>

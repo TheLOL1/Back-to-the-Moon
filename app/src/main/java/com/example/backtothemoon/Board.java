@@ -253,7 +253,17 @@ public class Board extends AppCompatActivity {
                         {
                             Toast.makeText(Board.this,"Incorrect answer, the correct answer is (A) Artemis!",Toast.LENGTH_LONG).show();
                         }
-                        Toast.makeText(Board.this,"FINISH GAME " + name + " " + score + "/7",Toast.LENGTH_LONG).show();
+                        AlertDialog.Builder popupFinishGame = new AlertDialog.Builder(Board.this);
+                        popupFinishGame.setTitle("FINISH GAME");
+                        popupFinishGame.setMessage(name + " " + score + "/7");
+                        popupFinishGame.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                            }
+                        });
+                        popupFinishGame.setCancelable(true);
+                        popupFinishGame.show();
                     }
                 }
                 else
